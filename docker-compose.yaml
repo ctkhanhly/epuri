@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+    
+    attacker:
+        image: attacker-epuri
+        tty: true
+        networks:
+            net-10.9.0.0:
+                ipv4_address: 10.9.0.2
+    
+    server:
+        image: server-epuri
+        tty: true
+        networks:
+            net-10.9.0.0:
+                ipv4_address: 10.9.0.3
+    
+    victim:
+        image: client-epuri
+        tty: true
+        networks:
+            net-10.9.0.0:
+                ipv4_address: 10.9.0.4
+
+networks:
+    net-10.9.0.0:
+        name: net-server
+        ipam:
+            config:
+                - subnet: 10.9.0.0/24
