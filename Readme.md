@@ -1,10 +1,11 @@
  To start a shell for each of the server, client, attacker and start attack models 1,2,3, run these commands such as in this case:
  
- ![i](assets/images/tutorial.png)
- 
 ```
 sudo docker container ls
 ```
+The output of the above command looks similar to this:
+
+![i](assets/images/tutorial.png)
 
 ## Server's container
 ```
