@@ -20,6 +20,7 @@ sudo docker exec -it 5d3 bash
 cd apps
 ```
 
+![i](assets/images/tutorial.png)
 If you're running model 1,2,3 in a row, make sure to remove obtained credentials at the end of each experiment
 
 ```
