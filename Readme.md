@@ -1,3 +1,13 @@
+ To build the docker images, run the commands
+ 
+ ```
+ chmod +x build.sh
+ ./build.sh
+ ```
+ To start docker containers
+  ```
+sudo docker compose up
+ ```
  To start a shell for each of the server, client, attacker and start attack models 1,2,3, run these commands such as in this case:
  
 ```
