@@ -1,6 +1,6 @@
 server = '10.9.0.3'
 attacker = '10.9.0.2'
-build: simplenet simplelogger epuri.c fssl simplenoti
+build: */*/* */*/*/* epuri.c
 	mkdir -p build \
 	&& cmake -S . -B build \
 	&& cd build \

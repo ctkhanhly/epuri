@@ -22,7 +22,7 @@ RUN cd /tmp\
     && make MALLOC=libc BUILD_TLS=yes
 
 RUN cd /tmp/redis-7.0.3/src \
-    && cp redis-server redis-cli /usr/local/bin/ \
+    && cp redis-server redis-cli /usr/local/bin/
 
 FROM intall-redis AS intall-cmake
 

@@ -1,6 +1,5 @@
 FROM build-epuri
 
-COPY data/redis.service /etc/systemd/system/redis.service
 COPY data/redis-server.conf /etc/redis/redis.conf
 COPY scripts/gen-redis-server-certs.sh \
     data/server.conf \

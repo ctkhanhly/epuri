@@ -33,6 +33,15 @@ static int configure_seccomp(int sockPair[2])
     rc = seccomp_rule_add(ctx, SCMP_ACT_NOTIFY,  SCMP_SYS(connect), 0);
     if(rc < 0)
         goto Failed;
+    rc = seccomp_rule_add(ctx, SCMP_ACT_KILL_PROCESS,  SCMP_SYS(fork), 0);
+    if(rc < 0)
+        goto Failed;
+    rc = seccomp_rule_add(ctx, SCMP_ACT_KILL_PROCESS,  SCMP_SYS(vfork), 0);
+    if(rc < 0)
+        goto Failed;
+    rc = seccomp_rule_add(ctx, SCMP_ACT_KILL_PROCESS,  SCMP_SYS(clone), 0);
+    if(rc < 0)
+        goto Failed;
     if (seccomp_load (ctx) >= 0) {
         simplelogger_log(&simplenoti_logger, "Sandbox: Loadded seccomp rules\n");
         int notifyFd = seccomp_notify_fd(ctx);
