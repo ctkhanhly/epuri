@@ -21,6 +21,7 @@ cd apps
 ```
 
 ![i](assets/images/tutorial.png)
+
 If you're running model 1,2,3 in a row, make sure to remove obtained credentials at the end of each experiment
 
 ```
@@ -33,6 +34,8 @@ rm /etc/redis/*.{key,crt}
 ```
 make run_redis_server
 ```
+![i](assets/images/model1/server.png)
+
 ## Step 2: Test if we can connect to redis server (failure)
 
 ```
@@ -48,6 +51,8 @@ make run_simplenet_server
 ```
 make run_unsandboxed_secure_redis_client
 ```
+![i](assets/images/model1/client.png)
+
 ## Step 5: Use obtained credentials and connect to redis server in the attacker's container (success)
 
 Check if client's private key, certificate, and certificate authority are obtained
@@ -61,6 +66,7 @@ mv client.crt redis-client.crt
 cd /apps
 make run_redis_client
 ```
+![i](assets/images/model1/attacker.png)
 
 # Model 2
 
@@ -68,6 +74,8 @@ make run_redis_client
 ```
 make run_redis_server
 ```
+![i](assets/images/model2/server.png)
+
 ## Step 2: Test if we can connect to redis server (failure)
 
 ```
@@ -83,6 +91,8 @@ make run_simplenet_server
 ```
 make run_unsecure_redis_client
 ```
+![i](assets/images/model2/client.png)
+
 ## Step 5: Use obtained credentials and connect to redis server in the attacker's container (success)
 
 Check if client's private key, certificate, and certificate authority are obtained
@@ -96,6 +106,7 @@ mv client.crt redis-client.crt
 cd /apps
 make run_redis_client
 ```
+![i](assets/images/model1/attacker.png)
 
 # Model 3
 
@@ -103,6 +114,8 @@ make run_redis_client
 ```
 make run_redis_server
 ```
+![i](assets/images/model3/server.png)
+
 ## Step 2: Test if we can connect to redis server (failure)
 
 ```
@@ -113,9 +126,12 @@ make run_redis_client
 ```
 make run_simplenet_server
 ```
-
 ## Step 4: Connect to redis server using config 1 unsanboxed in client's container
 ```
 make run_secure_redis_client
 ```
+![i](assets/images/model3/client.png)
+
 ## Step 5: Check that no credentials are obtained in attacker's container
+
+![i](assets/images/model1/attacker.png)
