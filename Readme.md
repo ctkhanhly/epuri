@@ -39,7 +39,7 @@ make run_redis_server
 ```
 ![i](assets/images/model1/server.png)
 
-## Step 2: Test if we can connect to redis server (failure)
+## Step 2: Test if we can connect to redis server in the attacker's container (failure)
 
 ```
 make run_redis_client
@@ -79,7 +79,7 @@ make run_redis_server
 ```
 ![i](assets/images/model2/server.png)
 
-## Step 2: Test if we can connect to redis server (failure)
+## Step 2: Test if we can connect to redis server in the attacker's container (failure)
 
 ```
 make run_redis_client
@@ -119,7 +119,7 @@ make run_redis_server
 ```
 ![i](assets/images/model3/server.png)
 
-## Step 2: Test if we can connect to redis server (failure)
+## Step 2: Test if we can connect to redis server in the attacker's container (failure)
 
 ```
 make run_redis_client
