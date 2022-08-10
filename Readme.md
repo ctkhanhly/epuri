@@ -109,7 +109,7 @@ mv client.crt redis-client.crt
 cd /apps
 make run_redis_client
 ```
-![i](assets/images/model1/attacker.png)
+![i](assets/images/model2/attacker.png)
 
 # Model 3
 
@@ -137,4 +137,4 @@ make run_secure_redis_client
 
 ## Step 5: Check that no credentials are obtained in attacker's container
 
-![i](assets/images/model1/attacker.png)
+![i](assets/images/model3/attacker.png)
