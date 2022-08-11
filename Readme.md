@@ -1,4 +1,4 @@
- My final project for Information Security at NYU Tandon. The accompanying report for this project is under ./assets/Epuri.pdf
+ My final project for Information Security at NYU Tandon. The accompanying report for this project is located under ./assets/Epuri.pdf
  
  To build the docker images, run the commands
  
