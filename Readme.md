@@ -150,3 +150,5 @@ make run_secure_redis_client
 ## Step 5: Check that no credentials are obtained in attacker's container
 
 ![i](assets/images/model3/attacker.png)
+
+In addition to the references, I used some code from this project: https://github.com/daveho/EasySandbox
